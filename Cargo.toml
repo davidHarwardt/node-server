@@ -1,0 +1,23 @@
+[package]
+name = "node-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+async-stream = "0.3.6"
+axum = { version = "0.8.1", features = ["macros"] }
+futures = "0.3.31"
+include-tailwind = { git = "https://github.com/davidHarwardt/web-utils", rev = "24798abeb0f13bd479a0e47324a44cd96964c68c", features = ["maud", "axum"] }
+# include-tailwind = { version = "0.2.0", features = ["maud", "axum"] }
+maud = { git = "https://github.com/lambda-fairy/maud", rev = "09b97ad8df9afbbf8a21f8eb3045d3dbe8faaba3", features = ["axum"] }
+postcard = { version = "1.1.1", features = ["alloc"] }
+# maud = { version = "0.2.0", features = ["axum"] }
+serde = { version = "1.0.217", features = ["derive"] }
+tokio = { version = "1.43.0", features = ["full"] }
+tower-livereload = "0.9.6"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+
+[build-dependencies]
+include-tailwind-build = "0.1.0"
